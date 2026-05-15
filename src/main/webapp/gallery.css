@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #fdfcf7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #8b0000;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+nav a.active {
+    background: gold;
+    color: #8b0000;
+    font-weight: bold;
+}
+
+/* Gallery Section */
+
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+.gallery h2 {
+    color: #8b0000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 10px;
+}
+
+.btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    user-select: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-view {
+    background-color: #8b0000;
+}
+
+.btn-view:hover {
+    background-color: #a30c0c;
+    transform: scale(1.05);
+}
+
+.btn-download {
+    background-color: #444;
+}
+
+.btn-download:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+/* Footer */
+
+footer {
+    background: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.95rem;
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

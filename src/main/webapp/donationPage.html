@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Balaganapathi Seva Mandali - Donate</title>
+  <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Sri Balaganapathi Seva Mandali</div>
+    <nav>
+      <a href="HomePage.html">Home</a>
+      <a href="Seva.html">Seva</a>
+      <a href="Gallary.html">Gallary</a>
+      <a href="donationPage.html" class="active">Donate</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Donation Section -->
+  <section class="donation">
+    <h2>Make a Donation</h2>
+    <p>Please fill in your details, then scan the QR or use bank details to make payment.</p>
+
+    <div class="donation-container">
+
+      <!-- Donor Details Form -->
+      <form action="DonateServlet" method="post" class="donation-form">
+        <label for="name"><b>Full Name</b></label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone"><b>Phone</b></label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="amount"><b>Donation Amount (₹)</b></label>
+        <input type="number" id="amount" name="amount" required>
+      </form>
+
+      <!-- QR + Bank -->
+      <div class="qr-bank">
+        <div class="qr-section">
+          <h3>Scan to Pay</h3>
+          <img src="images/QRCode1.png" alt="Donation QR Code">
+          <p><b>UPI-ID:</b> 9483936937m@pnb</p>
+          <p><b>MERCHANT:</b> SRI BALAGANAPATHIY SEVA MANDALI</p>
+        </div>
+
+        <div class="bank-details">
+          <h3>Bank Details</h3>
+          <p><b>Account Name:</b> Sri Balaganapathi Seva Mandali</p>
+          <p><b>Bank:</b> State Bank of India</p>
+          <p><b>Account No:</b> 1234567890</p>
+          <p><b>IFSC:</b> SBIN0001234</p>
+          <p><b>Branch:</b> Mysuru</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transaction ID + Submit -->
+    <form action="DonateServlet" method="post" class="transaction-form">
+      <label for="txn"><b>Transaction ID</b></label>
+      <input type="text" id="txn" name="txn" placeholder="Enter UPI/Bank Transaction ID" required>
+
+      <button type="submit">Submit Donation</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sri Balaganapathi Seva Mandali. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
